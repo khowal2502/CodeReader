@@ -1,0 +1,10 @@
+import logging
+
+# file created on 1st Jan 2020
+# author: @openenvoy
+
+public class Main:
+
+# This is another comment line
+    def main(args):
+        print("Hello world!"); // code, not comment

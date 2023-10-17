@@ -7,4 +7,7 @@ public class Main:
 
 # This is another comment line
     def main(args):
-        print("Hello world!"); // code, not comment
+        # Hey this is main function
+        """
+        print("Hello world!")
+        """

@@ -10,6 +10,7 @@ class PythonCommentParser(LineParser):
 		if line is None:
 			return False
 
+		line = line.replace(" ", "")
 		if line[0] == '#':
 			return True
 

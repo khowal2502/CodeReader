@@ -20,11 +20,20 @@ class CodeReaderService:
 		self.file = SingleFileReader(file_name)
 
 	def process_reading(self, lines):
+		multiline_comment_started = False
 		for line in lines:
 			line_type = self.code_parser.parse_line(line)
-			if line_type == "BLANK":
+			if line_type == "BLANK" and not multiline_comment_started:
 				self.blank_lines += 1
-			elif line_type == "COMMENT":
+			elif line_type == "COMMENT" and not multiline_comment_started:
+				self.comment_lines += 1
+			elif line_type == "MLC":
+				self.comment_lines += 1
+				if multiline_comment_started:
+					multiline_comment_started = False
+				else:
+					multiline_comment_started = True
+			elif multiline_comment_started:
 				self.comment_lines += 1
 			else:
 				self.code_lines += 1

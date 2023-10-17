@@ -1,6 +1,5 @@
 from interfaces.code_parser import CodeParser
-from classes.python import PythonBlankLineParser, PythonCommentParser
-from classes.python.python_multi_line_comment_parser import PythonMultiLineCommentParser
+from classes.python import PythonBlankLineParser, PythonCommentParser, PythonMultiLineCommentParser
 
 
 class PythonCodeParser(CodeParser):

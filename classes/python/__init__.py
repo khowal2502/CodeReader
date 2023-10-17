@@ -1,4 +1,5 @@
 from .python_comment_parser import PythonCommentParser
 from .python_blank_line_parser import PythonBlankLineParser
-from .python_code_parser import PythonCodeParser
 from .python_multi_line_comment_parser import PythonMultiLineCommentParser
+
+from .python_code_parser import PythonCodeParser
